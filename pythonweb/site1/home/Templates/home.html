@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT MANAGEMENT</title>
+    <link rel="icon" href="\site1\home\favicon-32x32.png" type="image/x-icon">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: left;
+            gap: 0px;
+            margin-top: 0px;
+            position: fixed; 
+            top: 0;        
+            left: 0;        
+            right: 0;        
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;  
+            padding: 10px 0;  
+        }
+        .header-box {
+            background-image: url('background2.jpg');
+            background-size: cover;
+            text-align: left;       
+            padding: 300px;             
+            font-size: 12px;         
+        }
+
+        .header-box h1 {
+            font-size: 50px;                        
+            font-weight:bolder;
+            text-transform: uppercase;   
+            color: #000000;               
+            padding-left: -1100px;
+            position: relative;
+            left: -200px;
+        }
+
+      
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+      
+        .btn {
+            transition: all 0.3s ease;
+            width: 120px;
+            height: 40px; 
+            text-align: center;
+            line-height: 40px; 
+        }
+
+        
+        .btn-primary {
+            background-color: #021f22;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #054a46;
+            color: white;
+        }
+
+        .btn-success {
+            background-color: #22a4ef;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #e6adad;
+            color: white;
+        }
+
+       
+        .btn:hover {
+            width: 130px;
+            height: 45px; 
+        }
+
+        #haha {
+            color: #021f22;
+            text-align: center;
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+        div {
+            border: #ffffff;
+        }
+
+        #hihi {
+            margin-top: 300px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 1000;
+        }
+        
+        .footer{
+            background-color: #272424;
+            padding: 200;
+            margin-top: 400px;
+        }
+        .footer h3 {
+            text-align: left;
+            color: #ffffff;
+            margin-left: 50px;
+            padding-top: 30px;
+        }
+
+        .footer p {
+            text-align: left;
+            color:#ffffff;
+            margin-left: 50px;
+            /* padding-bottom: 50px; */
+        }
+
+        #last {
+            text-align: left;
+            color:#ffffff;
+            margin-left: 50px;
+            padding-bottom: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header-box" id="headerBox">
+        <h1>TỔ CHỨC SỰ KIỆN </h1>   
+    </div>
+
+    <div class="button-container">
+        <button type="button" class="btn btn-primary">TRANG CHỦ</button>
+        <button type="button" class="btn btn-secondary">SỰ KIỆN</button>
+        <button type="button" class="btn btn-success">GIỎ HÀNG</button>
+        <button type="button" class="btn btn-danger">THÔNG TIN</button>
+
+    </div>
+
+    <div>
+        <p id="hihi"> Tổ chức sự kiện của trường UTH</p>
+        <p id="haha"> Website UTH là nền tảng tổ chức sự kiện chuyên nghiệp, giúp kết nối người tham gia với các sự kiện đa dạng từ hội nghị, hội thảo đến các buổi gặp gỡ giải trí. Với giao diện thân thiện và dễ sử dụng, UTH mang đến cho người dùng trải nghiệm thuận tiện trong việc tìm kiếm, đăng ký tham gia và quản lý sự kiện. Website không chỉ cung cấp thông tin chi tiết về từng sự kiện mà còn hỗ trợ thanh toán trực tuyến và giao tiếp giữa các nhà tổ chức với khách mời. UTH cam kết mang đến các sự kiện chất lượng, giúp các doanh nghiệp và cá nhân tổ chức các hoạt động thành công và ấn tượng.</p>
+
+    </div>
+
+    <div class="footer">
+        <h3>Thông tin liên hệ</h3>
+        <p>Địa chỉ: Số 123, Đường ABC, Quận 1, TP. Hồ Chí Minh</p>
+        <p>Điện thoại: (028) 123 456 789</p>
+        <p>Email: info@uth.com.vn</p>
+        <p id="last">Website: www.uth.com.vn</p>
+    </div>
+
+    <script>
+        // Lấy tất cả các nút có class "btn"
+        const buttons = document.getElementsByClassName("btn-primary");
+
+        // Lặp qua từng nút và thêm sự kiện click
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].onclick = function() {
+                alert("Bạn vừa nhấn nút " + buttons[i].innerText + "!");
+            };
+        }
+
+        
+    </script>
+</body>
+</html>
