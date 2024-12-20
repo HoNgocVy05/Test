@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -7,19 +8,20 @@
     <link rel="icon" href="\site1\home\favicon-32x32.png" type="image/x-icon">
 
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
-    <link href="home.css" rel="stylesheet">
+    <link href="{% static 'CSS\home.css' %}" rel="stylesheet">
+    <script> src="{% static 'JS\home.js' %"></script>
+
     
 </head>
 <body>
 
-    <img id="banner" src="background3.jpg">
+    <img id="banner" src="static\IMG\background3.jpg">
 
     <div class="taskbar">
         <div class="button-menu">
-            <button id="home">TRANG CHỦ</button>
-            <button id="event">SỰ KIỆN</button>
-            <button id="cart">VÉ</button>
-            <button id="info">THÔNG TIN</button>
+            <button id="home" onclick="window.location.href='https://courses.ut.edu.vn/'"<i class="fa-solid fa-house"></i>>TRANG CHỦ</button>
+            <button id="event" onclick="window.location.href='https://sv.ut.edu.vn/'">SỰ KIỆN</button>
+            <button id="info" onclick="window.location.href='https://portal.ut.edu.vn/'" >THÔNG TIN</button>
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Tìm kiếm...">
@@ -34,7 +36,7 @@
 
     </div>
 
-    <img id="anh" src="UTH.jpg">
+    <img id="anh" src="static\IMG\UTH.jpg">
 
     <div class="footer">
         <h3>Thông tin liên hệ</h3>
@@ -44,22 +46,5 @@
         <p id="last">Website: www.uth.com.vn</p>
     </div>
 
-    <script>
-        let lastScrollTop = 0;
-        const taskbar = document.querySelector('.taskbar'); 
-
-        window.addEventListener('scroll', function() {
-            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (currentScroll > lastScrollTop) {
-                taskbar.style.top = "-80px"; 
-            } else {
-                    taskbar.style.top = "0"; 
-            }
-            
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        }, false);
-
-    </script>
 </body>
 </html>
