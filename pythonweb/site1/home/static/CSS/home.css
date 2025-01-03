@@ -1,5 +1,6 @@
 .taskbar {
     display: flex;
+    flex-direction: column;
     gap: 0px;
     margin-top: 0px;
     position: fixed; 
@@ -15,6 +16,7 @@
     box-sizing: border-box;
     width: 100%;
 }
+
 .button-menu button {
     background: none; 
     border: none;
